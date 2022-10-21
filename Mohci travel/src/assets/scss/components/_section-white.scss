@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	Section white
+\* ------------------------------------------------------------ */
+
+.section-white {
+	.section__entry {
+		display: flex;
+		align-items: center;
+	}
+
+	.section__image {
+		flex: 0 0 50%;
+	}
+
+	.section__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.section__entry + .section__entry {
+		margin-top: 3rem;
+	}
+
+	.section__entry:nth-child(odd) .section__image {
+		order: 1;
+	}
+
+	.section__entry .section__content {
+		padding: 2rem 5rem;
+		flex: 0 0 50%;
+	}
+}

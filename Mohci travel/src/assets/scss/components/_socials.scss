@@ -1,0 +1,23 @@
+/* ------------------------------------------------------------ *\
+	Socials
+\* ------------------------------------------------------------ */
+
+.socials {
+	ul {
+		list-style: none;
+		display: flex;
+		align-items: center;
+	}
+
+	li + li {
+		margin-left: 2rem;
+	}
+
+	li {
+		transition: opacity .2s;
+
+		&:hover {
+			opacity: .6;
+		}
+	}
+}

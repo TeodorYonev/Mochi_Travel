@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------ *\
+	Quote
+\* ------------------------------------------------------------ */
+
+.quote {
+	display: flex;
+	align-items: center;
+
+	.quote__avatar {
+		flex: 0 0 24rem;
+	}
+
+	.quote__content {
+		flex: 1;
+		padding: 2rem 5rem;
+	}
+
+	.quote__content span {
+		font-weight: 300;
+	}
+}

@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------ *\
+	Credits
+\* ------------------------------------------------------------ */
+
+.credist {
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: .2rem;
+		left: 0;
+		width: 100%;
+		height: .2rem;
+		background: linear-gradient(to right, #bd162c, #ed8a13);
+	}
+}

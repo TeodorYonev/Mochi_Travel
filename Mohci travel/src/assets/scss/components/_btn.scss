@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	appearance: none;
+	font-family: $ff-sans-serif;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-color: rgba(0, 0, 0, .16);
+	border: solid .2rem #BD162C;
+	padding: 1.8rem 7.5rem;
+	color: #fff;
+	transition: background .3s;
+
+	&:hover {
+		background-color: #BD162C;
+	}
+
+	&--red {
+		background-color: #BD162C;
+		border: 0;
+		transition: opacity .2s;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	&--outline {
+		color: #2C2C2C;
+		background-color: transparent;
+		border: solid .2rem #2C2C2C;
+		border-radius: 3.3rem;
+	}
+}

@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+	Paging
+\* ------------------------------------------------------------ */
+
+.paging {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	font-size: 1.6rem;
+
+	li {
+		width: 3.2rem;
+		height: 3.2rem;
+		background-color: transparent;
+		color: #BD162C;
+		border: solid 1px #2C2C2C;
+		border-radius: 50%;
+		text-align: center;
+		transition: background .2s, color .2s;
+
+		&:hover {
+			background-color: #BD162C;
+			color: #fff;	
+		}
+	}
+
+	li.is-active {
+		background-color: #BD162C;
+		color: #fff;
+	}
+
+	li + li {
+		margin-left: 2em;
+	}
+
+	a {
+		line-height: 3.2rem;
+		border-radius: 50%;
+		display: block;
+	}
+}

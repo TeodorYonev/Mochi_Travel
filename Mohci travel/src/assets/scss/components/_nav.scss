@@ -1,0 +1,108 @@
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav {
+	@include breakpoint-down(mobile) {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background-color: rgba(255, 255, 255, .5);
+		width: 100%;
+		padding-right: 2rem;
+		min-height: calc(100vh - 13.5rem);
+		overflow: auto;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity .2s;
+	}
+
+	&.nav--active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	ul {
+		display: flex;
+		align-items: baseline;
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 1.2;
+
+
+		@include breakpoint-down(mobile) {
+			display: block;
+			font-size: 2.3rem;
+		}
+	}
+
+	li {
+		position: relative;
+
+		@include breakpoint-down(mobile) {
+			text-align: right;
+		}
+
+		&:hover {
+			&:before {
+				width: 100%;
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: .2rem;
+			background-color: #BD162C;
+			transition: width .3s;
+
+			@include breakpoint-down(mobile) {
+				display: none;
+			}
+		}
+	}
+
+	li.is-current {
+		&:before {
+			width: 100%;
+		}
+	}
+
+	li + li {
+		margin-left: 2rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 1.5rem 0 0;
+		}
+	}
+}
+
+/*  Nav alt  */
+
+.nav--alt {
+	ul {
+		display: block;
+		font-size: 1.6rem;
+	}
+
+	li {
+		&:before {
+			display: none;
+		}
+	}
+
+	li + li {
+		margin: 1.2rem 0 0;
+	}
+
+	a {
+		transition: color .2s;
+
+		&:hover {
+			color: #737373;
+		}
+	}
+}

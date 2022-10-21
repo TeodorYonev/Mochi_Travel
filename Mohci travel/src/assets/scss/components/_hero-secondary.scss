@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	Hero secondary
+\* ------------------------------------------------------------ */
+
+.hero-secondary {
+	min-height: 52rem;
+	position: relative;
+	display: flex;
+
+	.hero__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.hero__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.hero__content {
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		margin: auto;
+		max-width: 72rem;
+		padding: 0 2rem;
+	}
+}
