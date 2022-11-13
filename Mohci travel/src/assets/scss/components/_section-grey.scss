@@ -4,8 +4,13 @@
 
 .section-grey {
 	background-color: #F5F5F5;
+	padding: 8rem 0;
 
 	.section__content {
 		margin-bottom: 8.2rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4rem;
+		}
 	}
 }

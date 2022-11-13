@@ -8,20 +8,48 @@
 	display: flex;
 	background: linear-gradient(150deg, #BD162C 24%, transparent 24%);
 
+	@include breakpoint-down(mobile) {
+		background: linear-gradient(150deg, #BD162C 35%, transparent 24%);
+	}
+
+	@include breakpoint-down(mobile-small) {
+		display: block;
+	}
+
 	.feature__image {
 		flex: 0 0 30%;
 		padding: 4rem;
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 35%;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 50%;
+			padding: 2.5rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			padding: 2.8rem;
+		}
 	}
 
 	.feature__image img {
 		width: 100%;
 		height: 100%;
-		object-fic: cover;
 	}
 
 	.feature__content {
 		flex: 0 0 70%;
 		padding: 2rem;
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 65%;
+		}
+
+		@include breakpoint-down(mobile) {
+			flex: 0 0 50%;
+		}
 	}
 }
 

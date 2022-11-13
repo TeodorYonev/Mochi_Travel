@@ -8,6 +8,10 @@
 	position: relative;
 	padding: 0 5rem;
 
+	@include breakpoint-down(mobile) {
+		padding: 0;
+	}
+
 	.slider__clip {
 		padding-top: 2rem;
 	}
@@ -21,6 +25,10 @@
 		transform: translateY(-50%);
 		width: 100%;
 		z-index: 5;
+
+		@include breakpoint-down(mobile-medium) {
+			display: none;
+		}
 	}
 
 	.slider__prev,

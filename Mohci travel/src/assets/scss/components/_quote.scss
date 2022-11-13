@@ -6,13 +6,39 @@
 	display: flex;
 	align-items: center;
 
+	@include breakpoint-down(mobile) {
+		display: block;
+	}
+
+	p {
+		margin-bottom: 2rem;
+	}
+
 	.quote__avatar {
 		flex: 0 0 24rem;
+
+		@include breakpoint-down(mobile) {
+			width: 45%;
+			margin: 0 auto;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			width: 65%;
+		}
 	}
 
 	.quote__content {
 		flex: 1;
 		padding: 2rem 5rem;
+
+		@include breakpoint-down(mobile) {
+			text-align: center;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	.quote__content span {

@@ -5,14 +5,19 @@
 .header {
 	position: relative;
 
-	.header__inner {
+	.header__bar {
 		background-color: #fff;
 		display: flex;
 		justify-content: flex-end;
+		flex-flow: wrap;
 		padding: .7rem 5rem;
+
+		@include breakpoint-down(mobile) {
+			justify-content: center;
+		}
 	}
 
-	.header__entry {
+	.header__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -25,11 +30,42 @@
 		padding: 1.5rem 5.5rem;
 
 		@include breakpoint-down(mobile) {
-			padding: 1.5rem 2rem;
+			padding: 1.5rem 2rem 1.5rem 0;
 		}
+	}
+
+	.header__entry {
+		@include breakpoint-down(mobile) {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background-color: rgba(255, 255, 255, .5);
+			width: 100%;
+			height: calc(100vh - 13.2rem);
+			padding-right: 2rem;
+			overflow: auto;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity .2s;
+		}
+	}
+
+	.header__entry--active {
+		opacity: 1;
+		pointer-events: auto;
 	}
 
 	.header__socials {
 		margin-left: 3rem;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+		}
+	}
+
+	.header__nav li {
+		@include breakpoint-down(mobile) {
+			text-align: right;
+		}
 	}
 }

@@ -19,6 +19,11 @@
 	color: #fff;
 	transition: background .3s;
 
+	@include breakpoint-down(mobile) {
+		font-size: 1.6rem;
+		padding: 1rem 5rem;
+	}
+
 	&:hover {
 		background-color: #BD162C;
 	}

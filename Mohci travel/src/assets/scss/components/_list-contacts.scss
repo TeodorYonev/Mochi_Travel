@@ -5,11 +5,17 @@
 .list-contacts {
 	list-style: none;
 	display: flex;
+	flex-flow: wrap;
 	align-items: center;
 	font-size: 1.6rem;
+	justify-content: center;
 
 	li + li {
 		margin-left: 2rem;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+		}
 	}
 
 	li {

@@ -3,25 +3,6 @@
 \* ------------------------------------------------------------ */
 
 .nav {
-	@include breakpoint-down(mobile) {
-		position: absolute;
-		top: 100%;
-		right: 0;
-		background-color: rgba(255, 255, 255, .5);
-		width: 100%;
-		padding-right: 2rem;
-		min-height: calc(100vh - 13.5rem);
-		overflow: auto;
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity .2s;
-	}
-
-	&.nav--active {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
 	ul {
 		display: flex;
 		align-items: baseline;
@@ -38,10 +19,6 @@
 
 	li {
 		position: relative;
-
-		@include breakpoint-down(mobile) {
-			text-align: right;
-		}
 
 		&:hover {
 			&:before {

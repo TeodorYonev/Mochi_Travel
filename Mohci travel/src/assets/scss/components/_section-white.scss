@@ -6,10 +6,19 @@
 	.section__entry {
 		display: flex;
 		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
 	}
 
 	.section__image {
 		flex: 0 0 50%;
+
+		@include breakpoint-down(mobile) {
+			max-width: 55rem;
+			margin: 0 auto;
+		}
 	}
 
 	.section__image img {
@@ -29,5 +38,9 @@
 	.section__entry .section__content {
 		padding: 2rem 5rem;
 		flex: 0 0 50%;
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 1rem 0;
+		}
 	}
 }

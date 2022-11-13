@@ -7,4 +7,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@include breakpoint-down(mobile) {
+		flex-direction: column;
+	}
 }

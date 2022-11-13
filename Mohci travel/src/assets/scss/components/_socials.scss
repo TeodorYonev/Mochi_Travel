@@ -7,6 +7,10 @@
 		list-style: none;
 		display: flex;
 		align-items: center;
+
+		@include breakpoint-down(mobile-small) {
+			justify-content: center;
+		}
 	}
 
 	li + li {

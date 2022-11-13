@@ -1,9 +1,9 @@
 const trigger = $('.js-trigger');
-const nav = $('.js-nav');
+const headerEntry = $('.js-header-entry');
 const body = $('body');
 
-trigger.on('click', function() {
-	$(this).toggleClass('trigger--pressed');
-	nav.toggleClass('nav--active');
+trigger.on('click', () => {
+	trigger.toggleClass('trigger--pressed');
+	headerEntry.toggleClass('header__entry--active');
 	body.toggleClass('locked');
 });

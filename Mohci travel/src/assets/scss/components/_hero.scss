@@ -7,6 +7,14 @@
 	min-height: 62rem;
 	display: flex;
 
+	@include breakpoint-down(tablet) {
+		min-height: 55rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		min-height: 50rem;
+	}
+
 	h1 {
 		margin-bottom: 5.4rem;
 	}
